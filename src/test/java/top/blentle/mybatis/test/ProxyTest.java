@@ -1,7 +1,6 @@
 package top.blentle.mybatis.test;
 
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
+import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
@@ -16,5 +15,7 @@ public class ProxyTest {
         Subject subject = (Subject)Proxy.newProxyInstance(subjectImpl.getClass().getClassLoader(),subjectImpl.getClass().getInterfaces(),new SubjectProxyInvocationHandler(subjectImpl));
         subject.sayHi("renhuan");
         subject.sayHello("renhuan");
+        Class<Subject> clazz = Subject.class;
+        Method[] methods = clazz.getMethods();
     }
 }
