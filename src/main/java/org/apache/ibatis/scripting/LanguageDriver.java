@@ -30,7 +30,7 @@ public interface LanguageDriver {
      *
      * @param mappedStatement The mapped statement that is being executed
      * @param parameterObject The input parameter object (can be null)
-     * @param boundSql The resulting SQL once the dynamic language has been executed.
+     * @param boundSql        The resulting SQL once the dynamic language has been executed.
      * @return
      * @author Frank D. Martinez [mnesarco]
      * @see DefaultParameterHandler
@@ -42,7 +42,7 @@ public interface LanguageDriver {
      * It is called during startup, when the mapped statement is read from a class or an xml file.
      *
      * @param configuration The MyBatis configuration
-     * @param script XNode parsed from a XML file
+     * @param script        XNode parsed from a XML file
      * @param parameterType input parameter type got from a mapper method or specified in the parameterType xml attribute. Can be null.
      * @return
      */
@@ -53,7 +53,7 @@ public interface LanguageDriver {
      * It is called during startup, when the mapped statement is read from a class or an xml file.
      *
      * @param configuration The MyBatis configuration
-     * @param script The content of the annotation
+     * @param script        The content of the annotation
      * @param parameterType input parameter type got from a mapper method or specified in the parameterType xml attribute. Can be null.
      * @return
      */
